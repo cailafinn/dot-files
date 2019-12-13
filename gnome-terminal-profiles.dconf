@@ -1,7 +1,7 @@
 [:6ce5fc24-fefd-4134-bd95-d3fdad99a6c8]
-foreground-color='rgb(47,255,0)'
-visible-name='R'
-palette=['rgb(46,52,54)', 'rgb(29,52,255)', 'rgb(255,142,0)', 'rgb(191,0,196)', 'rgb(189,44,0)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(67,121,255)', 'rgb(255,245,0)', 'rgb(255,0,250)', 'rgb(255,93,0)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+foreground-color='rgb(247,20,186)'
+visible-name='PO'
+palette=['rgb(46,52,54)', 'rgb(196,100,0)', 'rgb(0,81,203)', 'rgb(191,0,196)', 'rgb(31,255,0)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(255,114,0)', 'rgb(21,148,246)', 'rgb(255,0,250)', 'rgb(1,214,106)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(255,255,255)']
 default-size-columns=110
 use-transparent-background=true
 use-theme-colors=false
@@ -10,7 +10,7 @@ background-color='rgb(0,0,0)'
 background-transparency-percent=16
 
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-foreground-color='rgb(35,149,255)'
+foreground-color='rgb(21,148,246)'
 visible-name='B'
 login-shell=false
 cell-width-scale=1.0
@@ -40,9 +40,9 @@ background-transparency-percent=12
 audible-bell=true
 
 [:3fe12e46-e645-4b44-aee4-69955a97b2e4]
-foreground-color='rgb(250,255,0)'
-visible-name='RB'
-palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(0,185,5)', 'rgb(191,0,196)', 'rgb(0,111,255)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(60,255,53)', 'rgb(255,0,250)', 'rgb(0,171,255)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+foreground-color='rgb(186,245,132)'
+visible-name='AG'
+palette=['rgb(181,85,0)', 'rgb(204,0,0)', 'rgb(135,135,135)', 'rgb(191,0,196)', 'rgb(179,212,255)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(255,136,0)', 'rgb(239,41,41)', 'rgb(186,186,186)', 'rgb(255,0,250)', 'rgb(255,255,255)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(112,112,112)']
 default-size-columns=110
 use-transparent-background=true
 use-theme-colors=false
