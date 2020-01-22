@@ -5,6 +5,8 @@
 # Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
 # iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
 
+# Add .bash_prompt to the list of sources in .bash_profile or .bashrc
+
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -91,6 +93,10 @@ if [[ "${SSH_TTY}" ]]; then
 else
 	hostStyle="${yellow}";
 fi;
+
+# Format:
+# <HOST> in <WORKING_DIR> on <GIT_BRANCH> [<GIT STATUS>]
+# $ <TEXT ENTRY>
 
 # Set the terminal title and prompt.
 PS1="\[\033]0;\W\007\]"; # working directory base name
