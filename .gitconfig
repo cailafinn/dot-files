@@ -1,1 +1,42 @@
-/home/conor/repos/config/.gitconfig
+[core]
+	editor = vim
+[user]
+	name = Conor Finn
+	email = conor.finn@stfc.ac.uk
+[credential]
+	helper = cache
+[alias]
+	chf = ! git log --name-only --format= origin/master.. | sort | uniq
+	ch = diff --stat master...
+	chh = diff --stat HEAD
+	camne = commit --amend --no-edit
+	stf = ! git fetch -q && git status
+	st = status
+	l = log
+	lol = log --oneline
+	lcb = log origin/master..
+	lolcb = log origin/master.. --oneline
+	unadd = reset HEAD --
+	adda = add -A
+        addi = add -i
+	test-pr = "! f() { git fetch origin +pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
+	del-pr = ! git checkout master && git branch | grep pr/ | xargs git branch -D
+	pushup = push -u origin HEAD
+	pushf = push --force-with-lease
+	uncommit = reset HEAD^
+	br = branch
+	reshead = reset --hard HEAD
+	cfu = commit --fixup
+	rbi = rebase -i --autosquash
+	cfarb = "! f() { git commit --fixup $1 && git rebase -i --autosquash $1^; }; f"
+	co = checkout
+	competition = "! f() { git shortlog -sn --since=\"$1\" --no-merges | grep -i \"$2\"; }; f"
+	recent = "! git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\""
+	start = ! git st && git lolcb
+	add-test-data = !bash -c \"tools/Development/git/git-add-test-data $*\"
+[merge]
+	tool = meld
+[mergetool]
+	keepBackup = false
+[commit]
+	template = ~/.committemplate
