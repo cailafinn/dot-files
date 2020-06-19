@@ -7,8 +7,9 @@
 	helper = cache
 [alias]
 	chf = ! git log --name-only --format= origin/master.. | sort | uniq
-	ch = diff --stat master...
+	ch = diff --stat origin/master...
 	chh = diff --stat HEAD
+	fch = ! git ch | grep files
 	camne = commit --amend --no-edit
 	stf = ! git fetch -q && git status
 	st = status
@@ -28,6 +29,7 @@
 	reshead = reset --hard HEAD
 	cfu = commit --fixup
 	rbi = rebase -i --autosquash
+	rbm = ! git fetch && git rebase origin/master
 	cfarb = "! f() { git commit --fixup $1 && git rebase -i --autosquash $1^; }; f"
 	co = checkout
 	competition = "! f() { git shortlog -sn --since=\"$1\" --no-merges | grep -i \"$2\"; }; f"
