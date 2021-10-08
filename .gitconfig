@@ -6,8 +6,8 @@
 [credential]
 	helper = cache
 [alias]
-	chf = ! git log --name-only --format= origin/master.. | sort | uniq
-	ch = diff --stat origin/master...
+	chf = ! git log --name-only --format= origin/main.. | sort | uniq
+	ch = diff --stat origin/main...
 	chh = diff --stat HEAD
 	fch = ! git ch | grep files
 	camne = commit --amend --no-edit
@@ -15,13 +15,13 @@
 	st = status
 	l = log
 	lol = log --oneline
-	lcb = log origin/master..
-	lolcb = log origin/master.. --oneline
+	lcb = log origin/main..
+	lolcb = log origin/main.. --oneline
 	unadd = reset HEAD --
 	adda = add -A
         addi = add -i
 	test-pr = "! f() { git fetch origin +pull/$1/merge:pr/$1-merged && git checkout pr/$1-merged; }; f"
-	del-pr = ! git checkout master && git branch | grep pr/ | xargs git branch -D
+	del-pr = ! git checkout main && git branch | grep pr/ | xargs git branch -D
 	pushup = push -u origin HEAD
 	pushf = push --force-with-lease
 	uncommit = reset HEAD^
@@ -29,7 +29,7 @@
 	reshead = reset --hard HEAD
 	cfu = commit --fixup
 	rbi = rebase -i --autosquash
-	rbm = ! git fetch && git rebase origin/master
+	rbm = ! git fetch && git rebase origin/main
 	cfarb = "! f() { git commit --fixup $1 && git rebase -i --autosquash $1^; }; f"
 	co = checkout
 	competition = "! f() { git shortlog -sn --since=\"$1\" --no-merges | grep -i \"$2\"; }; f"
