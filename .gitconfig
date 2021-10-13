@@ -36,6 +36,8 @@
 	recent = "! git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\""
 	start = ! git st && git lolcb
 	add-test-data = !bash -c \"tools/Development/git/git-add-test-data $*\"
+	dfs = diff --staged
+	df = diff
 [merge]
 	tool = meld
 [mergetool]
