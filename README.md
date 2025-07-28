@@ -1,4 +1,4 @@
-# Mathias’s dotfiles - Conor Fork
+# Mathias’s dotfiles - Caila's Fork
 
 # Gnome Profile Installation
 
