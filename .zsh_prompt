@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+autoload -Uz vcs_info
+
+precmd() { 
+zstyle ':vcs_info:git:*' formats "on %F{yellow}%b%f %F{cyan}[%u%m%c]%f"
+zstyle ':vcs_info:git:*' check-for-changes true
+vcs_info
+setopt prompt_subst
+
+# Set the terminal title and prompt.
+PS1=""; # working directory base name
+PS1+="%F{white}[%*] " # time
+PS1+="%F{magenta}%n"; # username
+PS1+="@";
+PS1+="%m%f"; # host
+PS1+=" in ";
+PS1+="%F{cyan}%~%f "; # working directory full path
+NEWLINE=$'\n'
+PROMPT_STR="%B$PS1%b$vcs_info_msg_0_$NEWLINE"
+PROMPT_STR+="%F{green}[$CONDA_DEFAULT_ENV]%f $ "
+PROMPT=$PROMPT_STR
+}
+
+
